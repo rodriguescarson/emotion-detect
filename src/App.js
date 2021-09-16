@@ -7,14 +7,18 @@ const emojiDictionary = {
   "😔": "sad",
   "🥡": "takeout box",
   "❤️": "love",
-  "😑": "annoyance"
+  "😑": "annoyance",
+  "😍": "Heart-Eyes",
+  "😘": "winky-kissy",
+  "😏": "Smirking Face",
+  "🥺":"Pleading Face"
 };
 console.log(Object.keys(emojiDictionary));
 var emojiweknow = Object.keys(emojiDictionary);
 var userName = "Carson";
 
 // var userName = prompt("Enter your name:");
-var color = "blue";
+var color = "#F59E0B";
 
 export default function App() {
   // const [likeCounter, setLikeCounter] = useState(0);
@@ -47,19 +51,26 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1 style={{ backgroundColor: color }}>Welcome {userName}</h1>
+      <header>
+      
+    <h1  className="header">Which is this emoji?</h1>
+      </header>
+<main className="container container-center">
+
       {/* <button onClick={likeClickhandler}>{likeCounter}</button>
        */}
       {/* <input onChange={inputChangeHandler}></input>
       <div>Welcome {userInput}</div> */}
-      <input onChange={emojiInputHandler} />
-      <h2>{meaning}</h2>
-      <h3>emoji we know</h3>
+      
+      <input className="input-text" onChange={emojiInputHandler} />
+        <h2 style={{padding:"20px"}}>{meaning}</h2>
+      
+      <h3 style={{padding:"20px"}}>emoji we know</h3>
 
       {emojiweknow.map((emoji) => {
         return (
           <span
-            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+            style={{ fontSize: "2rem", padding: "1rem", cursor: "pointer" }}
             key={emoji}
             onClick={() => emojiClickHandler(emoji)}
           >
@@ -67,6 +78,28 @@ export default function App() {
           </span>
         );
       })}
+
+</main>
+    <footer class="footer container">
+        <div class="footer-header">Connect with me on social media</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/rodriguescarson">
+                    Linkedin
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/rodriguescarson">
+                    Github
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/carsonmarz">
+                    twitter
+                </a>
+            </li>
+        </ul>
+    </footer>
     </div>
   );
 }
