@@ -15,10 +15,8 @@ const emojiDictionary = {
 };
 console.log(Object.keys(emojiDictionary));
 var emojiweknow = Object.keys(emojiDictionary);
-var userName = "Carson";
 
 // var userName = prompt("Enter your name:");
-var color = "#F59E0B";
 
 export default function App() {
   // const [likeCounter, setLikeCounter] = useState(0);
